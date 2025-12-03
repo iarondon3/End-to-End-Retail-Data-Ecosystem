@@ -32,7 +32,7 @@ This repository is organized into five core modules, representing the lifecycle 
 
 
 
-### **📂 02-Distributed-Architecture**
+### **📂 [02-Distributed-Architecture](./02-Distributed-Architecture)**
 
 *Horizontal Scaling & Sharding*
 - Challenge: The monolithic database could not sustain the write-throughput of concurrent store transactions.
