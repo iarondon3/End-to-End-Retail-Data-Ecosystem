@@ -86,5 +86,5 @@ The engine switched to Bitmap Index Scan and Index Scan, eliminating the full ta
       Execution Time: 0.160 ms
 
 ### 🚀 Performance Impact
-   - Latency Reduction: Dropped from 0.567 ms to 0.160 ms (72% improvement).
-   - Scalability: By removing the Sequential Scans, the query complexity dropped from Linear O(N) to Logarithmic O(log N), ensuring stability even if the database grows to millions of rows.
+   - **Latency Reduction**: Dropped from 0.567 ms to 0.160 ms ***(72% improvement)***.
+   - **Scalability**: By removing the Sequential Scans, the query complexity dropped from Linear O(N) to Logarithmic O(log N), ensuring stability even if the database grows to millions of rows.
