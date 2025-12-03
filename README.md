@@ -41,7 +41,7 @@ This repository is organized into five core modules, representing the lifecycle 
 
 
 
-### **📂 03-NoSQL-Integration**
+### **📂 [03-NoSQL-Integration](./03-NoSQL-Integration)**
 
 *Flexible Customer Data Modeling*
 - Challenge: The relational model was too rigid to capture dynamic customer profiles and nested interaction logs.
@@ -49,7 +49,7 @@ This repository is organized into five core modules, representing the lifecycle 
 - Outcome: Enabled fast, single-read retrieval of complex customer histories without expensive SQL joins, facilitating real-time profile lookups.
 
 
-### **📂 04-ETL-Data-Warehousing**
+### **📂  [04-ETL-Data-Warehousing](./04-ETL-Data-Warehousing)**
 
 *Business Intelligence & Dimensional Modeling*
 
@@ -63,7 +63,7 @@ This repository is organized into five core modules, representing the lifecycle 
   
 - Outcome: Empowered stakeholders to visualize KPI trends, such as "Average Order Value (AOV) by Day" and "Month-over-Month Growth by Channel."
 
-### **📂 05-Big-Data-Analytics**
+### **📂 [05-Big-Data-Analytics](./05-Big-Data-Analytics)**
 
 *Spark SQL & Behavioral Analysis*
 
