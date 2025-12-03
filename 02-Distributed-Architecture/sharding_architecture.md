@@ -27,10 +27,26 @@ services:
   # --- WORKER NODES (1 to 4) ---
   citus_worker_1:
     image: citusdata/citus:12.1
-    environment: {POSTGRES_PASSWORD: 0000}
-    networks: [citusnet]
+    container_name: citus_worker_1
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 0000 
+      POSTGRES_DB: coorddb
+    volumes:
+      - pg_data_citus_worker_1:/var/lib/postgresql/data
+      - ./init/init_citus/worker:/docker-entrypoint-initdb.d
+    networks:
+      - citusnet
+
   
   # ... (Workers 2, 3, and 4 follow the same configuration)
+
+volumes:
+  pg_data_citus_coord:
+  pg_data_citus_worker_1:
+  pg_data_citus_worker_2:
+  pg_data_citus_worker_3:
+  pg_data_citus_worker_4:
 
 networks:
   citusnet:
