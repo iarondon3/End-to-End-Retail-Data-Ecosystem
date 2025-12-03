@@ -21,7 +21,7 @@ This repository is organized into five core modules, representing the lifecycle 
 
 
 
-### **📂 01-SQL-Optimization**
+### **📂 [01-SQL-Optimization](./01-SQL-Optimization)** ### 
 
 *High-Performance OLTP Tuning*
 
