@@ -1,9 +1,13 @@
 # 🐘 Big Data & Behavioral Analytics Showcase
 
-## 📉 Scenario: Beyond the Transaction
-**The Problem:** Our SQL transactional database recorded sales perfectly, but it was blind to "lost opportunities." We didn't know how many customers were visiting, adding items to carts, and *failing* to buy.
+## 📉 Scenario: Simulating & Diagnosing Scale
+**The Context:** To test the architecture's limits, we moved beyond the small operational dataset. Since real-world "Big Data" was unavailable, we needed to simulate a high-volume e-commerce environment.
 
-**The Solution:** We ingested massive event logs (Clicks, Carts, Payments) into **Databricks** to analyze the full Customer Journey using Spark SQL.
+**The Solution: Synthetic Data Engineering**
+We developed a **Python script using the `Faker` library** to generate over **1.1 Million synthetic events** (Clickstream, Cart Interactions, Payment Logs). This allowed us to:
+1.  Stress-test the Spark cluster with massive datasets.
+2.  Perform complex joins typically required in production environments.
+3.  **Audit Data Integrity:** By analyzing these generated logs, we uncovered logic gaps in the simulation, serving as a perfect case study for Data Quality debugging.
 
 ---
 
