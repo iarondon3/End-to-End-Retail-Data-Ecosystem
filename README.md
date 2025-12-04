@@ -41,7 +41,7 @@ This repository is organized into five core modules, representing the lifecycle 
 
 
 
-### **📂 [03-NoSQL-Integration](./03-NoSQL-Integration)**
+### **📂 [03-NoSQL-Integration](./03-NoSQL-Integration)**   
 
 *Flexible Customer Data Modeling*
 - Challenge: The relational model was too rigid to capture dynamic customer profiles and nested interaction logs.
