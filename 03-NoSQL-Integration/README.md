@@ -12,7 +12,7 @@ While the relational model (PostgreSQL) excelled at transactional integrity, it 
 * **Sharding:** Designed a sharding strategy based on Geography (`country`) to ensure horizontal scalability.
 
 ## 📄 Files in this Folder
-* `mongodb_modeling.md`: A detailed showcase of the JSON schema design and the aggregation queries used for analytics.
+**[`mongodb_modeling.md`](./mongodb_modeling.md)**: A detailed showcase of the JSON schema design and the aggregation queries used for analytics.
 
 ---
 *Return to [Main Portfolio](../README.md)*
