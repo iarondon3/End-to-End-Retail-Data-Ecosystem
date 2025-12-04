@@ -66,29 +66,29 @@ db.getCollection('venta').aggregate([
 This advanced query calculates the average number of items a customer buys per visit. It demonstrates the use of $addFields to calculate a derived metric before grouping.
 
 ```java
-db.getCollection('venta').aggregate([
-  {
-    // Step 1: Calculate total items in the current cart
-    $addFields: {
-      unidadesTotalesPorVenta: {
-        $sum: '$detalleVentas.cantidad_vendida'
+db.getCollection('venta').aggregate(
+  [
+    {
+      $addFields: {
+        unidadesTotalesPorVenta: {
+          $sum: '$detalleVentas.cantidad_vendida'
+        }
       }
-    }
-  },
-  {
-    // Step 2: Group by Customer and calculate their average
-    $group: {
-      _id: {
-        nombre: '$cliente.nombre',
-        apellido: '$cliente.apellido'
-      },
-      cestaPromedioUnidades: {
-        $avg: '$unidadesTotalesPorVenta'
+    },
+    {
+      $group: {
+        _id: {
+          nombre: '$cliente.nombre',
+          apellido: '$cliente.apellido'
+        },
+        cestaPromedioUnidades: {
+          $avg: '$unidadesTotalesPorVenta'
+        }
       }
-    }
-  },
-  { $sort: { cestaPromedioUnidades: -1 } }
-])
+    },
+    { $sort: { cestaPromedioUnidades: -1 } }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true } )
 ```
 
 ## 3. Scalability: Sharding Strategy
