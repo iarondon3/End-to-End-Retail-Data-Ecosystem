@@ -1,7 +1,7 @@
 # 🌐 Unit 2: Distributed Database Architecture
 
 ## 📌 Overview
-In this module, we transitioned the monolithic PostgreSQL database into a **Distributed Cluster** using the **Citus** extension. The goal was to achieve horizontal scalability to support the growing transaction volume across multiple countries (Spain, Colombia, Mexico, Chile).
+In this module, we transitioned the PostgreSQL database into a **Distributed Cluster** using the **Citus** extension. The goal was to achieve horizontal scalability to support the growing transaction volume across multiple countries (Spain, Colombia, Mexico, Chile).
 
 **Objective:** Distribute the write load across multiple nodes while maintaining data consistency and minimizing network latency.
 
