@@ -12,7 +12,7 @@ The traditional Data Mart answered "What happened?". In this module, we transiti
 * **Diagnostic Analytics:** Identified critical data integrity issues and bottlenecks in the conversion funnel.
 
 ## 📄 Files in this Folder
-* `spark_analytics_showcase.md`: A detailed walkthrough of the behavioral analysis, featuring the "Broken Funnel" diagnosis and the Cross-Selling recommendation engine.
+**[`spark_analytics_showcase.md`](./spark_analytics_showcase.md)**: A detailed walkthrough of the behavioral analysis, featuring the "Broken Funnel" diagnosis and the Cross-Selling recommendation engine.
 
 ---
 *Return to [Main Portfolio](../README.md)*
