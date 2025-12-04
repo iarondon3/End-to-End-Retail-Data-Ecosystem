@@ -42,5 +42,5 @@ Notice how `Client`, `Branch` (Sucursal), and `Invoice` (Factura) details are em
   }
 }
 ```
-## ***MongoDB Squema***
+### ***MongoDB Squema***
 ![Evidence of mongo_squema](./mongo_squema.png)
