@@ -14,14 +14,33 @@ We attempted to build a standard conversion funnel to measure the drop-off rate 
 We aggregated events from three disparate log tables using `UNION ALL`.
 
 ```sql
-SELECT '1. Product Views' AS Stage, COUNT(*) AS Value FROM default.flujo_clicks_event
+WITH exploracion AS (
+  SELECT COUNT(*) AS eventos_exploracion
+  FROM default.flujo_clicks_event
+  WHERE evento = 'product_view'
+),
+consideracion AS (
+  SELECT COUNT(*) AS eventos_carrito
+  FROM default.carrito_event_1
+  WHERE accion = 'add'
+),
+intento_pago AS (
+  SELECT COUNT(*) AS eventos_pago
+  FROM default.intento_pago_event_1
+),
+compra_exitosa AS (
+  SELECT COUNT(*) AS eventos_exitosos
+  FROM default.intento_pago_event_1
+  WHERE resultado = 'approved'
+)
+SELECT '1. Vistas de Producto' AS Etapa, eventos_exploracion AS Valor FROM exploracion
 UNION ALL
-SELECT '2. Added to Cart', COUNT(*) FROM default.carrito_event_1
+SELECT '2. Agregados al Carrito' AS Etapa, eventos_carrito AS Valor FROM consideracion
 UNION ALL
-SELECT '3. Payment Attempts', COUNT(*) FROM default.intento_pago_event_1
+SELECT '3. Intentos de Pago' AS Etapa, eventos_pago AS Valor FROM intento_pago
 UNION ALL
-SELECT '4. Successful Payments', COUNT(*) FROM default.intento_pago_event_1 WHERE resultado = 'approved'
-ORDER BY Stage;
+SELECT '4. Pagos Exitosos' AS Etapa, eventos_exitosos AS Valor FROM compra_exitosa
+ORDER BY Etapa 
 ```
 
 **🚨 Critical Discovery:** *The 75% Failure Rate*
