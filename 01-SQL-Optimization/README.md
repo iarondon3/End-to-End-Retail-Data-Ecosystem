@@ -11,8 +11,8 @@ In this module, we analyzed the performance of the transactional PostgreSQL data
 * **Data Typing:** Optimized column data types to reduce storage footprint.
 
 ## 📄 Files in this Folder
-* `optimization_showcase.md`: Contains the "Before & After" queries and the index creation commands.
-* `performance_report.md`: Summary of the query cost reduction (Cost units drop).
+* **[`optimization_showcase.md`](./optimization_showcase.md)**: Contains the "Before & After" queries and the index creation commands.
+
 
 ---
 *Return to [Main Portfolio](../README.md)*
