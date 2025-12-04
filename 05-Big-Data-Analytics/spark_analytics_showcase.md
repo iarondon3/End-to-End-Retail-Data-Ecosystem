@@ -42,6 +42,7 @@ UNION ALL
 SELECT '4. Pagos Exitosos' AS Etapa, eventos_exitosos AS Valor FROM compra_exitosa
 ORDER BY Etapa 
 ```
+![Final funnel_chart](./funnel_chart.png)
 
 **🚨 Critical Discovery:** *The 75% Failure Rate*
 
@@ -96,6 +97,8 @@ GROUP BY p.nombre
 ORDER BY veces_visto_y_no_comprado DESC
 LIMIT 10;
 ```
+![Final cross_sell_chart](./cross_sell_chart.png)
+
 **💡 Strategic Insight**
 
 Customers buying Mineral Water frequently viewed Hair Care Ampoules and Pain Relief Medication but didn't add them to the cart.
