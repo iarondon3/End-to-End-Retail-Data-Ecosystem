@@ -58,7 +58,7 @@ To ensure scalability and performance, we applied different distribution strateg
 For massive transactional tables, we modified the primary keys to include the Country ID (`id_pais`) to enforce data locality.
 
 * **Shard Key:** `id_pais` (Country ID).
-* **Goal:** Co-location. All sales, details, and products for "Mexico" must live on the same physical node.
+* **Goal:** Co-location. All sales, details, and products for a specific country must live on the same physical node.
 
 ```sql
 -- 1. Modify Primary Keys to include the Distribution Column
