@@ -90,3 +90,10 @@ db.getCollection('venta').aggregate([
   { $sort: { cestaPromedioUnidades: -1 } }
 ])
 ```
+
+## 3. Scalability: Sharding Strategy
+To handle massive growth, we designed a Sharded Cluster architecture.
+
+Shard Key: { "sucursal.pais": 1, "sucursal._id": 1 }
+
+Rationale: By sharding based on Country, we ensure that all sales data for a specific region (e.g., "Colombia") resides on the same physical shard. This isolates workloads and improves local query performance.
