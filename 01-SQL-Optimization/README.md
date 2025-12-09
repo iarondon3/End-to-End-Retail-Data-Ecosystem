@@ -11,7 +11,7 @@ We simulate a real-world analytical scenario where the lack of proper indexing d
 * **Indexing Strategy:** Implemented B-Tree indexes to target specific bottlenecks:
 * **Interactive Simulation:** Created a reproducible environment where users can stress-test the database with variable volumes (up to 500k records) to visualize the optimization impact.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1f_EAGTVF8MTHsQNBM_mxVcyChgx9OyOd#scrollTo=zzGvzOPERk1F)
+[![OPEN IN COLAB](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1f_EAGTVF8MTHsQNBM_mxVcyChgx9OyOd#scrollTo=zzGvzOPERk1F)
 
 ## 📄 Files in this Folder
 * **[`optimization_demo.ipynb`](./optimization_demo.ipynb)**: 🌟 ***Interactive Demo.*** A Colab Notebook where you can generate the data, run the complex slow queries, apply the indexes, and verify the performance boost yourself. **(Click the "Open in Colab" badge above to run it).**
