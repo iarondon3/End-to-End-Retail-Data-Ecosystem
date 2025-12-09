@@ -21,7 +21,7 @@ The data generation pipeline is fully parametric. Inside the Notebook, you will 
 ## 🚀 How to Run
 You can simulate the data generation process directly in your browser without installing any local dependencies. Click the badge below to open the interactive environment:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1d5HqYy7v3fKrU-zRBrxEW8AnAtk_gic8#scrollTo=ANvhAiRSrtWT)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1d5HqYy7v3fKrU-zRBrxEW8AnAtk_gic8?usp=sharing)
 
 ## 📄 Files in this Folder
 * **[`data_generation_pipeline.ipynb`](./data_generation_pipeline.ipynb)**: The interactive Colab Notebook containing the DDL schemas and the Python generation script. **Use this to customize the data volume.**
