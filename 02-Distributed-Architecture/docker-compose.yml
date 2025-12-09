@@ -1,0 +1,89 @@
+# -----------------------------------------------------------------------------
+# PRODUCTION ARCHITECTURE: MULTI-REGION CLUSTER
+# Topology: 1 Coordinator + 4 Workers (Representing 4 Operating Countries)
+# -----------------------------------------------------------------------------
+
+services:
+  # --- COORDINATOR NODE ---
+  # Central node for query routing and metadata.
+  citus_coordinator:
+    image: citusdata/citus:12.1
+    container_name: citus_coordinator
+    ports:
+      - "5437:5432" # Mapped to 5437 to avoid conflict with local Postgres
+    environment: 
+      POSTGRES_USER: postgres 
+      POSTGRES_PASSWORD: password123 # Generic password for portfolio safety
+      POSTGRES_DB: coorddb
+      PGPASSWORD: password123
+    volumes:
+      - pgdata_citus_coord:/var/lib/postgresql/data
+      - ./init_scripts:/docker-entrypoint-initdb.d # Auto-enable extension
+    networks:
+      - citusnet
+    
+  # --- WORKER 1:  ---
+  citus_worker_1:
+    image: citusdata/citus:12.1
+    container_name: citus_worker_1
+    environment: 
+      POSTGRES_USER: postgres 
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: coorddb
+    volumes:
+      - pgdata_citus_w1:/var/lib/postgresql/data
+      - ./init_scripts:/docker-entrypoint-initdb.d
+    networks:
+      - citusnet
+    
+  # --- WORKER 2:  ---
+  citus_worker_2:
+    image: citusdata/citus:12.1
+    container_name: citus_worker_2
+    environment:
+      POSTGRES_USER: postgres 
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: coorddb
+    volumes:
+      - pgdata_citus_w2:/var/lib/postgresql/data
+      - ./init_scripts:/docker-entrypoint-initdb.d
+    networks:
+      - citusnet    
+
+  # --- WORKER 3: ---
+  citus_worker_3:
+    image: citusdata/citus:12.1
+    container_name: citus_worker_3
+    environment:
+      POSTGRES_USER: postgres 
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: coorddb
+    volumes:
+      - pgdata_citus_w3:/var/lib/postgresql/data
+      - ./init_scripts:/docker-entrypoint-initdb.d
+    networks:
+      - citusnet
+
+  # --- WORKER 4: ---
+  citus_worker_4:
+    image: citusdata/citus:12.1
+    container_name: citus_worker_4
+    environment:
+      POSTGRES_USER: postgres 
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: coorddb
+    volumes:
+      - pgdata_citus_w4:/var/lib/postgresql/data
+      - ./init_scripts:/docker-entrypoint-initdb.d
+    networks:
+      - citusnet
+
+volumes:
+  pgdata_citus_coord:
+  pgdata_citus_w1:
+  pgdata_citus_w2:
+  pgdata_citus_w3:
+  pgdata_citus_w4:
+
+networks:
+  citusnet:
