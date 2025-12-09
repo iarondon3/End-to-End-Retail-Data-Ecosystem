@@ -1,0 +1,82 @@
+{
+  "_id": {
+    "$oid": "68f00f0c2a74780398d29028"
+  },
+  "fecha": {
+    "$date": "2025-01-23T23:51:11.000Z"
+  },
+  "canalVenta": "TIENDA",
+  "ptosGenerados": 17,
+  "cliente": {
+    "afiliado": true,
+    "apellido": "Mesa",
+    "nombre": "Tito"
+  },
+  "cupon": [
+    {
+      "cuponCanjeado": 25
+    }
+  ],
+  "detalleVentas": [
+    {
+      "cantidad_vendida": 2,
+      "producto": {
+        "marca": "Clinique",
+        "nombre": "Tónico Facial Suave",
+        "precio_unitario": {
+          "$numberDecimal": "11.3000"
+        },
+        "categoria": {
+          "nombre_categoria": "Dermatológicos"
+        }
+      }
+    },
+    {
+      "cantidad_vendida": 8,
+      "producto": {
+        "marca": "Max Factor",
+        "nombre": "Rubor Compacto Rosa",
+        "precio_unitario": {
+          "$numberDecimal": "6.8000"
+        },
+        "categoria": {
+          "nombre_categoria": "Maquillaje y Cosméticos"
+        }
+      }
+    }
+  ],
+  "factura": {
+    "creadoEn": {
+      "$date": "2025-01-24T00:57:11.000Z"
+    },
+    "idFactura": {
+      "$numberLong": "3"
+    },
+    "detalleFacturas": [
+      {
+        "subtotal": {
+          "$numberDecimal": "217.3300"
+        },
+        "impuestos": {
+          "$numberDecimal": "34.7700"
+        },
+        "descuento": {
+          "$numberDecimal": "0.0000"
+        },
+        "idFactura": {
+          "$numberLong": "3"
+        },
+        "montoTotal": 252.11
+      }
+    ]
+  },
+  "puntos": [
+    {
+      "puntosCanjeados": 21
+    }
+  ],
+  "sucursal": {
+    "ciudad": "Cali",
+    "pais": "Colombia"
+  }
+}
