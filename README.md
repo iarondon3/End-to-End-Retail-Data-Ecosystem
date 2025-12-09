@@ -21,7 +21,7 @@ This repository is organized into five core modules, representing the lifecycle 
 
 
 ### 📂 [00-Setup-and-Data-Generation](./00-Setup-and-Data-Generation)
-**Environment Setup & Data Generation Pipeline**
+*Environment Setup & Data Generation Pipeline*
 * **Role:** Foundation Layer (Stage 0).
 * **Task:** Automated generation of synthetic records using Python/Faker and PostgreSQL schema DDL implementation.
 * **Key Feature:** Includes an interactive **Colab Notebook** (Google Colab) that allows users to customize the data volume (Demo vs. Stress Test) and spins up an ephemeral database to replicate the environment in one click.
