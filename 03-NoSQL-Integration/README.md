@@ -15,7 +15,7 @@ In this module, we extend the data platform by integrating **MongoDB (NoSQL)** t
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1tlTGU8N8uUloPpfxdKSdtA7okvKdAdHh#scrollTo=jZ4IsyIFR10H)
 
 ## 📄 Files in this Folder
-* **[`migration_lab.ipynb`](./migration_lab.ipynb)**: 🌟 **Interactive Migration Lab.** A Jupyter Notebook where you can simulate the full pipeline: Generating raw SQL-like data, running the Python ETL transformation, and executing Aggregation queries on an in-memory MongoDB instance. **(Click the Badge above to run).**
+* **[`migration_lab.ipynb`](./migration_lab.ipynb)**: 🌟 **Interactive Migration Lab.** A Colab Notebook where you can simulate the full pipeline: Generating raw SQL-like data, running the Python ETL transformation, and executing Aggregation queries on an in-memory MongoDB instance. **(Click the Badge above to run).**
 * **[`mongodb_architecture_strategy.md`](./mongodb_architecture_strategy.md)**: A technical decision record (ADR) explaining the choice of MongoDB over Redis/Neo4j, the justification for the "Pure Embedding" pattern, and CAP Theorem considerations.
 * **[`sales_collection_sample.json`](./sales_collection_sample.json)**: A sample JSON document demonstrating the final schema structure, showing how customer and product details are embedded within the transaction.
 
